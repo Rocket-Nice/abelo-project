@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background: #f5f7fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.container .main-h2 {
+  margin: 10px 0 20px;
+}
+
+header {
+  background: #466276;
+  color: #fff;
+  padding: 24px 0;
+  box-shadow: none;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+}
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.category-section {
+  margin-bottom: 48px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(70, 98, 118, 0.08);
+  padding: 32px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.category-header h3 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #466276;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+.category-header .btn {
+  background: none;
+  color: #466276;
+  font-weight: 600;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+  box-shadow: none;
+}
+.category-header .btn:hover {
+  text-decoration: none;
+  opacity: 0.7;
+  background: none;
+}
+
+.articles-grid {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.article-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(70, 98, 118, 0.06);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  min-height: 180px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(70, 98, 118, 0.13);
+}
+.article-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 16px;
+  border-radius: 8px;
+}
+.article-card .article-content {
+  padding: 16px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.article-card .article-content h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.article-card .article-content h4 a {
+  color: #466276;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.article-card .article-content .meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+.article-card .article-content p {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.btn {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 8px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: #0056b3;
+}
+
+.category-page {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.category-info {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+}
+.category-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.stats {
+  margin-top: 10px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.sorting {
+  margin-bottom: 30px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+.sorting span {
+  margin-right: 15px;
+}
+.sorting a {
+  color: #666;
+  text-decoration: none;
+  margin-right: 15px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+.sorting a.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.article-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+@media (max-width: 768px) {
+  .article-item {
+    flex-direction: column;
+  }
+}
+.article-item .article-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .article-item .article-image {
+    width: 100%;
+    height: 200px;
+  }
+}
+.article-item .article-content {
+  flex: 1;
+}
+.article-item .article-content h3 a {
+  color: #333;
+  text-decoration: none;
+}
+.article-item .article-content h3 a:hover {
+  color: #007bff;
+}
+.article-item .article-content p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+.pagination a,
+.pagination span {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #007bff;
+}
+.pagination span.current {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.full-article {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 768px) {
+  .full-article {
+    padding: 20px;
+  }
+}
+.full-article .main-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.full-article h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .full-article h1 {
+    font-size: 1.8rem;
+  }
+}
+.full-article .meta {
+  color: #999;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+.full-article h3 {
+  margin: 30px 0 15px;
+  font-size: 1.5rem;
+}
+.full-article .description p,
+.full-article .content p {
+  line-height: 1.8;
+}
+
+.categories {
+  margin-bottom: 30px;
+}
+
+.category-badge {
+  display: inline-block;
+  background: #e9ecef;
+  color: #495057;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
+.category-badge:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.related-articles {
+  margin-top: 50px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.related-articles h3 {
+  margin-bottom: 25px;
+}
+
+footer {
+  background: #466276;
+  color: #fff;
+  text-align: center;
+  padding: 32px 0 16px 0;
+  margin-top: 40px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/*# sourceMappingURL=style.css.map */
